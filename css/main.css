@@ -1,84 +1,23 @@
-
-html, body {
-    background-color:black;
-    height: 100%;
-    width: 100%;
-    margin: 0;
+.circle {
+    height: 200px;
+    width: 200px;
+    background-color: black;
+    border-radius: 50%;
+    animation-duration: 1.5s;
+    animation-name: bounce;
+    position:absolute;
+    animation-delay: 600s;
+    /*animation-delay: 1s;*/
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
-
-
-main {
-    background-image: url("/img/image.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100vw 100vh;
-    width: 100vw;
-    height: 100vh;
-    min-height: 100%;
-    box-sizing: border-box;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    opacity: 1;
-}
-
-div {
-    background-image: url("/img/camera.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size:contain;
-    height:100%;
-    /*max-height: 80%*/
-    display:flex;
-    justify-content: center;
-    align-content: center;
-
-}
-p {
-    color:white;
-    font-size: 4vw;
-    text-align:center;
-}
-
-#camera_but {
-    background-color: transparent;
-    position: absolute;
-    top: 20%;
-    right: calc(50vw - 50vh);
-    width: 15vw;
-    height: 5vh;
-    max-width : 100px;
-    min-width : 30px;
-    min-height : 30px;
-}
-
-@media only screen and (max-width: 755px) {
-    #camera_but {
-        right: calc(50vw - 50vh);
-        top: calc(45vh - 18vw);
-    }
-}
-
-@media only screen and (max-width: 755px) and (max-height: 500px){
-    #camera_but {
-        /*background-color:red;*/
-        /*!*right: 11vw;*!*/
-        /*top: calc(45vh - 18vw);*/
-        /*Too lazy just get rid of button if too small*/
-        visibility: hidden;
-    }
-}
-
-#album {
-    background-image: url("/img/album.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    position: absolute;
-    right:5vw;
-    bottom: 10vh;
-}
-
-#album_but {
-    height:100px;
-    width:80px;
-    opacity:0;
+/*https://www.w3schools.com/css/css3_animations.asp*/
+@keyframes bounce {
+    0%   {background-color:red; left:-10vw; top:0px;width:200px;}
+    23%  {width:200px;height:200px;}
+    25%  {background-color:yellow; left:25vw; top:80vh;width:250px;height:150px;}
+    50%  {background-color:blue; left:50vw; top:0vh;width:200px;height:200px;}
+    73%  {width:200px;height:200px;}
+    75%  {background-color:green; left:75vw; top:80vh;width:250px;height:150px;}
+    100% {background-color:red; left:110vw; top:0px;width:200px;height:200px;}
 }

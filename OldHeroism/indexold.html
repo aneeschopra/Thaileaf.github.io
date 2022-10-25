@@ -1,0 +1,76 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <title>Heroism Of Vision</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href="css/main.css"/>
+</head>
+
+<body>
+<main id="backImg">
+    <div>
+        <button id="camera_but" onclick="cameraClick()"> Take Picture! </button>
+<!--        <button id="album" onclick=""-->
+        <form id="album" action="index2.html" method="GET">
+            <input id="album_but" type="submit" name="num" value="-1" />
+        </form>
+    </div>
+
+
+</main>
+
+
+</body>
+
+<script>
+    var opacity = 1.0;
+    var arr = ['img/image.jpg', 'img/image2Lazlo.jpg', 'img/image3.jpg', 'img/image4JacquesHenri.jpg',
+                "img/image5JacobRiis.jpg", "img/image6JosephCornell.jpg", "img/Image7MyanmarCoup.jpeg",
+                "img/image8pollution.jpg"];
+    var imgNum = 0;
+async function cameraClick() {
+    let time = .05;
+
+    //https://stackoverflow.com/questions/9419263/how-to-play-audio
+    // Shutter sound
+    var audio = new Audio('/audio/camera-shutter.mp3');
+    audio.play();
+
+    changeLink();
+
+    // Fade out
+    for (let i = 0; i < 10; i++) {
+        opacity -= .1;
+        await sleep(time * 1000);
+        document.getElementById("backImg").style.opacity = opacity;
+    }
+
+    // Select image
+    imgNum = (imgNum + 1) % 8;
+    let url = "url(" + arr[imgNum] +")";
+    document.getElementById("backImg").style.backgroundImage = url;
+
+    // Fade in
+    for (let i = 0; i < 10; i++) {
+        opacity += .1;
+        await sleep(time * 1000);
+        document.getElementById("backImg").style.opacity = opacity;
+    }
+
+}
+
+function changeLink() {
+    document.getElementById("album_but").value = imgNum;
+}
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+</script>
+
+
+</html>
+
+
