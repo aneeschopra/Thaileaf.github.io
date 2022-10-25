@@ -9,7 +9,7 @@ body {
     animation-duration: 1.5s;
     animation-name: bounce;
     position:absolute;
-    animation-delay: 5s;
+    animation-delay: 3s;
     /*animation-delay: 1s;*/
     animation-timing-function: linear;
     animation-iteration-count: infinite;
@@ -19,7 +19,7 @@ body {
 @keyframes bounce {
     0%   {background-color:red; left:-10vw; top:0px;width:200px;}
     23%  {width:200px;height:200px;}
-    25%  {background-color:yellow; left:25vw; top:80vh;width:250px;height:150px;}
+    25%  {left:25vw; top:80vh;width:250px;height:150px;}
     50%  {background-color:blue; left:50vw; top:0vh;width:200px;height:200px;}
     73%  {width:200px;height:200px;}
     75%  {background-color:green; left:75vw; top:80vh;width:250px;height:150px;}
