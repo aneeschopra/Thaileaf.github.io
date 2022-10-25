@@ -1,0 +1,13 @@
+.noListMarker {
+    list-style:none;
+    overflow: visible;
+}
+.listMarker {
+    background-size:50px auto;
+    background-repeat: no-repeat;
+    display:inline-block;
+    background-image:url("./NyanCat.png");
+    background-position: top left;
+    background-position-y:25px;
+    padding: 0px 60px;
+}

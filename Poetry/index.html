@@ -1,0 +1,136 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title>Personal Effects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel = "stylesheet" href="./css/main.css"/>
+</head>
+
+<body>
+  <main>
+    <div>
+      <div id="shape"></div>
+      <p id="read"></p>
+
+    </div>
+
+
+  </main>
+
+  <script>
+    function move_head() {
+      document.getElementById("head")
+    }
+  </script>
+
+  <script>
+    window.onload = () => setTimeout(typeWriter, 2000);
+
+    var i = 0;
+    var txt = 'You’re posing. You’re scared.\n' +
+      'A body falls\n' +
+      'and you learn to step over\n' +
+      'a loosened head. You begin to appreciate\n' +
+      'the heft of your boot soles,\n' +
+      'how they propel you,\n' +
+      'how they can kick in\n' +
+      'a face–\n' +
+      'the collapse\n' +
+      'of a canopy bed\n' +
+      'in an aerial bombardment,\n' +
+      'mosquito netting doused\n' +
+      'in napalm–cheekbones fragile\n' +
+      'as moth wings beneath the heel.\n' +
+      'You tighten your laces\n' +
+      'until they hold together\n' +
+      'a capable man.\n' +
+      'Whatever rains,\n' +
+      'the weight of your feet\n' +
+      'swings you forward,\n' +
+      'goose-stepping pendulums\n' +
+      'a body less and less yours–\n' +
+      'a body, God knows,\n' +
+      'is not what makes you\n' +
+      'anyway. So the hands\n' +
+      'that said they never would\n' +
+      'begin finding\n' +
+      'grenade pins around their fingers,\n' +
+      'begin flipping through this album\n' +
+      'with soot under their nails\n' +
+      'you were not ready\n' +
+      'But they issued the shovel and the rifle and you dug\n' +
+      'But to watch you sitting there between the sandbags\n' +
+      'But to watch the sand spilling out the bullet holes\n' +
+      'But what did they expect\n' +
+      'But what did they really think a sheet of metal could prevent\n' +
+      'But I sat rolling little ears of pasta off my thumb like helmets\n' +
+      'But it was not a table of fallen men\n' +
+      'But my hand registered fatigue\n' +
+      'But the men in fatigues were tired of sleeping in shifts\n' +
+      'But you snuck into town and dialed home until you wrote your fingers\n' +
+      '       were tired\n' +
+      'But the code for Shiraz was down\n' +
+      'But all of Shiraz was down\n' +
+      'But the sheet lightning above the Ferris wheel of rusted bolts\n' +
+      'But I am sure they are alright you wrote Well to reassure yourself\n' +
+      'But the wind like an old mouth shaking the unnamed evergreen outside\n' +
+      '       my window\n' +
+      'But what I mean is I\'d like very much to talk a bit\n' +
+      'Hello\n';
+    var delay = 100;
+    var j = 0;
+    //https://www.w3schools.com/howto/howto_js_typewriter.asp
+    async function typeWriter() {
+      if (i < txt.length) {
+
+        document.getElementById("read").innerHTML += txt.charAt(i);
+        if (txt.charAt(i) === '.') {
+          setTimeout(typeWriter, 500);
+          j++;
+        }
+        else if (txt.charAt(i) === '\n') {
+          document.getElementById("read").innerHTML += "<br>"
+          if(j >= 4) {
+            if (txt.charAt(i - 1) === '.' || txt.charAt(i) === '\n') {
+              await sleep(500); // https://www.sitepoint.com/delay-sleep-pause-wait/
+              document.getElementById("read").innerHTML = "";
+              j = 0;
+            }
+          }
+
+
+          setTimeout(typeWriter, 300);
+
+          j++;
+        }
+        else {
+          setTimeout(typeWriter, delay); // Executes function after certain delay
+        }
+        if (j >= 4) {
+
+        }
+        i++;
+      }
+    }
+
+
+
+    // function getNxtSentenceLength(txt, posStart) {
+    //   while(txt.charAt(posStart) !== '\n') {
+    //     posStart++;
+    //   }
+    //   return posStart;
+    // }
+  </script>
+  <script>
+    function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms)); // Why does this only run once?
+    }
+  </script>
+</body>
+
+</html>
+
+
