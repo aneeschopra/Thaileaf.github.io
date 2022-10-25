@@ -9,7 +9,7 @@ body {
     animation-duration: 1.5s;
     animation-name: bounce;
     position:absolute;
-    animation-delay: 600s;
+    animation-delay: 5s;
     /*animation-delay: 1s;*/
     animation-timing-function: linear;
     animation-iteration-count: infinite;
