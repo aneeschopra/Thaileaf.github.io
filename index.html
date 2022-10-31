@@ -3,15 +3,86 @@
     <meta charset="UTF-8">
     <title>CSSAnimations</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href="css/main.css"/>
+    <link rel = "stylesheet" href="./main.css"/>
 </head>
 <body>
 <div>
-    <a href="./Week2/index.html">Week2 - As We May Think</a><br>
-    <a href="./Week3/index.html">Week3 - Ways of Seeing</a><br>
-    <a href="./Poetry/index.html">Week5 - Poetry</a><br>
-    <a href="./OldHeroism/indexold.html">Week6 - Heroism of Vision</a><br>
-    <a href="./index2.html">Week8 - CSS</a><br>
+    <h1>Thaison's WebDev Portfolio</h1>
+    <ul>
+        <li>
+            <a href="./Week2/index.html">Week2 - As We May Think</a><br>
+        </li>
+        <li>
+        <a href="./Week3/index.html">Week3 - Ways of Seeing</a><br>
+
+        </li>
+        <li>
+
+            <a href="./Poetry/index.html">Week5 - Poetry</a><br>
+        </li>
+        <li>
+
+            <a href="./OldHeroism/indexold.html">Week6 - Heroism of Vision</a><br>
+        </li>
+        <li>
+
+            <a href="./index2.html">Week8 - CSS</a><br>
+        </li>
+        <li>
+            <a href="./Week10/index.html">Week 10 - RMB City</a>
+        </li>
+    </ul>
+
 </div>
+<div id="sno" class="snow front"></div>
+<div id="sno" class="snow front b"></div>
+<div class="snow middle"></div>
+<div class="snow middle b"></div>
+<div class="snow back"></div>
+<div class="snow back b"></div>
+<!--<button onclick ="matrix()">Press Me</button>-->
 </body>
+<script>
+    window.onLoad = spawn();
+
+    function matrix() { // Debug
+        var layers = document.getElementsByClassName("snow");
+        for(let j = 0; j < layers.length; j++) {
+            console.log(getComputedStyle(layers[j]).transform)
+        }
+    }
+
+    function move() {
+
+    }
+
+
+    function spawn() {
+        // console.log("hello");
+        var density = 50;
+
+        var layers = document.getElementsByClassName("snow");
+
+        for(let j = 0; j < layers.length; j++) {
+            for(let i = 0; i < density; i++) {
+                let x = Math.floor(Math.random() * window.width);
+                let y = Math.min(Math.floor(Math.random() * window.height), window.height - 100);
+                let newFlake = ", rgb(255, 255, 255) " + x + "px " + y + "px 10px 0px"
+                let elem = layers[j];
+                let style = getComputedStyle(elem).boxShadow;
+                style += newFlake;
+                // console.log(getComputedStyle(elem).transform);
+                elem.style.setProperty("box-shadow", style)
+
+                // document.getElementById("sno").style.boxShadow = newFlakes
+            }
+
+            // let trans = Math.floor(Math.random() * 50);
+            // let transtring = "translateY(200vh) translateX(" + trans + "vw)";
+            // console.log(transtring);
+            // layers[j].style.transform = transtring;
+        }
+
+    }
+</script>
 </html>
