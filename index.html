@@ -34,6 +34,7 @@
     </ul>
 
 </div>
+<p>If snow broke refresh</p>
 <div id="sno" class="snow front"></div>
 <div id="sno" class="snow front b"></div>
 <div class="snow middle"></div>
@@ -65,8 +66,8 @@
 
         for(let j = 0; j < layers.length; j++) {
             for(let i = 0; i < density; i++) {
-                let x = Math.floor(Math.random() * window.width);
-                let y = Math.min(Math.floor(Math.random() * window.height), window.height - 100);
+                let x = Math.floor(Math.random() * window.innerWidth);
+                let y = Math.min(Math.floor(Math.random() * window.innerHeight), window.innerHeight - 100);
                 let newFlake = ", rgb(255, 255, 255) " + x + "px " + y + "px 10px 0px"
                 let elem = layers[j];
                 let style = getComputedStyle(elem).boxShadow;
