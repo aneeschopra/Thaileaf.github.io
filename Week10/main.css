@@ -19,7 +19,7 @@ a { color: inherit; }
 
 #wireframe {
     position:absolute;
-    bottom:0;
+    top:0px;
     font-size: 30px;
 }
 
