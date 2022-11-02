@@ -26,7 +26,7 @@
         </li>
         <li>
 
-            <a href="./index2.html">Week8 - CSS</a><br>
+            <a href="css/index2.html">Week8 - CSS</a><br>
         </li>
         <li>
             <a href="./Week10/index.html">Week 10 - RMB City</a>
@@ -36,12 +36,12 @@
 </div>
 <p>If snow broke refresh</p>
 <div id="sno" class="snow front"></div>
-<div id="sno" class="snow front b"></div>
+<div id="sno2" class="snow front b"></div>
 <div class="snow middle"></div>
 <div class="snow middle b"></div>
 <div class="snow back"></div>
 <div class="snow back b"></div>
-<!--<button onclick ="matrix()">Press Me</button>-->
+<button onclick ="enlarge()">Press Me</button>
 </body>
 <script>
     window.onLoad = spawn();
@@ -52,9 +52,14 @@
             console.log(getComputedStyle(layers[j]).transform)
         }
     }
-
-    function move() {
-
+    var counter = 5;
+    async function enlarge() {
+        var layers = document.getElementsByClassName("snow");
+        for(let i = 1; i < counter; i += .1) {
+            await sleep(1);
+            for(let j = 0; j < layers.length; j++)
+            layers[j].style.setProperty("transform", "scale("+i+") translateX(-" + i * 200 + "px)");
+        }
     }
 
 
@@ -87,6 +92,11 @@
             // layers[j].style.transform = transtring;
         }
 
+    }
+</script>
+<script>
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms)); // Why does this only run once?
     }
 </script>
 </html>
