@@ -1,5 +1,6 @@
 body {
     background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
+    overflow:hidden;
 }
 
 .snow {
@@ -18,13 +19,23 @@ body {
     box-shadow: 0 100px 10px #fff;
 }
 
-#sno {
+#sno, #sno2, #sno3 {
     animation-name: fall, scalee;
     animation-iteration-count: infinite, 1;
-    animation-duration: 10s, 9s;
     animation-timing-function: linear, ease-in;
+    animation-duration: 10s, 9s;
     animation-delay: 10s, 0s;
 }
+
+#sno2 {
+    animation-duration: 15s, 9s;
+
+}
+
+#sno3 {
+    animation-duration: 25s, 9s;
+}
+
 
 .snow.middle {
     height: 12px;
@@ -33,6 +44,9 @@ body {
     animation-delay: 3s;
     animation-duration: 15s;
 }
+
+
+
 
 .snow.back {
     height: 5px;
