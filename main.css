@@ -7,6 +7,7 @@ body {
     border-radius: 100%;
     opacity: .5;
     position: absolute;
+    left: -10vw;
     top: -100vh;
     animation-name: fall;
     animation-timing-function: linear;
@@ -62,8 +63,15 @@ body {
 }
 
 
+
 @keyframes fall {
-    100% {transform: translateY(200vh); }
+    0% {transform: translateY(0vh) translateX(0vw); }
+    40% {transform: translateY(80vh) translateX(12vw); }
+    50% {transform: translateY(100vh) translateX(15vw);}
+    60% {transform: translateY(120vh) translateX(17vw);}
+    75% {transform: translateY(150vh) translateX(18vw);}
+    90% {transform: translateY(180vh) translateX(19vw);}
+    100% {transform: translateY(200vh) translateX(20vw); }
 }
 
 @keyframes scalee {
@@ -73,3 +81,79 @@ body {
     /*100% {transform: scale(1) translateY(100vh); }*/
 }
 
+.pole {
+    position: absolute;
+    transform: scale(0.9);
+    left:5vw;
+    bottom:-20vh;
+    z-index: -10;
+}
+
+.shaft {
+    position:relative;
+    top:-15px;
+    height:500px;
+    width:50px;
+    /*background-color: white;*/
+    background: linear-gradient(90deg, antiquewhite -25%, white, papayawhip 125%);
+    box-shadow: inset 0px 0px 10px #555555, inset -10px 0 30px #555555;
+    clip-path: inset(10px 0px 50px 0px);
+    /*margin-top: 2020p*/
+}
+
+.shaft::after {
+    height: 100%;
+    width: 50px;
+    background: repeating-linear-gradient(
+        -45deg,
+        darkred,
+        transparent 10px,
+        transparent
+        10px,
+        transparent 20px
+    );
+    opacity: 8;
+    content: "";
+    display: inline-block;
+}
+
+.ball {
+    position:relative;
+    left: -7px;
+    top: 7px;
+    height:65px;
+    width:65px;
+    /*background-color:goldenrod;*/
+    background: radial-gradient(circle at 35% 25%, white 0, gold 25%, black 100%);
+    border-radius:50%;
+    z-index: 2;
+    clip-path: inset(0px 0px 10px 0px);
+    /*box-shadow: inset -8px -10px 15px #555555*/
+    /*filter: drop-shadow(inset 30px 10px 4px #4444dd);*/
+}
+
+/*.ball::after {*/
+/*    content:"";*/
+/*    display:inline-block;*/
+/*    height: 25px;*/
+/*    width: 25px;*/
+/*    border-radius: 50%;*/
+/*    background: radial-gradient(circle at center, white 0, gold 55%, darkgoldenrod 100%);*/
+/*}*/
+
+.flag {
+    position: absolute;
+    top:50px;
+    left: 50px;
+    width: 150px;
+    background-color: white;
+    box-shadow: inset -3px -3px 3px goldenrod;
+    border-style: groove;
+    border-bottom-color: gold;
+    border-right-color: gold;
+
+}
+
+a {
+    text-decoration: none;
+}

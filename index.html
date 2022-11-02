@@ -9,28 +9,6 @@
 <div>
     <h1>Thaison's WebDev Portfolio</h1>
     <ul>
-        <li>
-            <a href="./Week2/index.html">Week2 - As We May Think</a><br>
-        </li>
-        <li>
-        <a href="./Week3/index.html">Week3 - Ways of Seeing</a><br>
-
-        </li>
-        <li>
-
-            <a href="./Poetry/index.html">Week5 - Poetry</a><br>
-        </li>
-        <li>
-
-            <a href="./OldHeroism/indexold.html">Week6 - Heroism of Vision</a><br>
-        </li>
-        <li>
-
-            <a href="css/index2.html">Week8 - CSS</a><br>
-        </li>
-        <li>
-            <a href="./Week10/index.html">Week 10 - RMB City</a>
-        </li>
     </ul>
 
 </div>
@@ -44,7 +22,45 @@
 <div id="sno3" class="snow back"></div>
 <div class="snow back"></div>
 <div class="snow back b"></div>
+
+
 <button onclick ="playMusic()">Press me for copyrighted music!</button>
+
+<div class="pole">
+    <div class="ball"></div>
+    <div class="shaft"></div>
+    <div class="flag">
+
+    <a href="./Week2/index.html">Week2 - As We May Think</a>
+    </div>
+
+    <div class="flag">
+    <a href="./Week2/index.html">Week2 - As We May Think</a><br>
+    </div>
+    <div class="flag">
+
+    <a href="./Week3/index.html">Week3 - Ways of Seeing</a><br>
+
+    </div>
+    <div class="flag">
+
+        <a href="./Poetry/index.html">Week5 - Poetry</a><br>
+    </div>
+    <div class="flag">
+
+        <a href="./OldHeroism/indexold.html">Week6 - Heroism of Vision</a><br>
+    </div>
+    <div class="flag">
+
+        <a href="css/index2.html">Week8 - CSS</a><br>
+    </div>
+    <div class="flag">
+
+        <a href="./Week10/index.html">Week 10 - RMB City</a>
+    </div>
+
+</div>
+
 </body>
 <script>
     window.onLoad = spawn();
@@ -99,7 +115,17 @@
             // console.log(transtring);
             // layers[j].style.transform = transtring;
         }
+        posFlags();
+    }
 
+    function posFlags() {
+        let incr = 50;
+        let pos = 70;
+        var flags = document.getElementsByClassName("flag");
+        for(let i = 0; i < flags.length; i++) {
+            flags[i].style.setProperty("top", "" + pos + "px");
+            pos += incr;
+        }
     }
 </script>
 <script>
