@@ -72,11 +72,14 @@
         audio.play();
 
         var density = 50;
+        var c_density = ((window.innerWidth * window.innerHeight) * density) / 1933440; // Magic ratio
+
+        console.log(window.innerWidth * window.innerHeight);
 
         var layers = document.getElementsByClassName("snow");
 
         for(let j = 0; j < layers.length; j++) {
-            for(let i = 0; i < density; i++) {
+            for(let i = 0; i < c_density; i++) {
                 let x = Math.floor(Math.random() * window.innerWidth);
                 let y = Math.min(Math.floor(Math.random() * window.innerHeight), window.innerHeight - 100);
                 let newFlake = ", rgb(255, 255, 255) " + x + "px " + y + "px 10px 0px"
