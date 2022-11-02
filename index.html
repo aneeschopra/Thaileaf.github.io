@@ -44,7 +44,7 @@
 <div id="sno3" class="snow back"></div>
 <div class="snow back"></div>
 <div class="snow back b"></div>
-<button onclick ="enlarge()">Press Me</button>
+<button onclick ="playMusic()">Press me for music!</button>
 </body>
 <script>
     window.onLoad = spawn();
@@ -65,11 +65,13 @@
         }
     }
 
+    const audio = new Audio("./music/sleigh.mp3");
+
+    function playMusic() {
+        audio.play();
+    }
 
     function spawn() {
-        // console.log("hello");
-        const audio = new Audio("./music/sleigh.mp3");
-        audio.play();
 
         var density = 50;
         var c_density = ((window.innerWidth * window.innerHeight) * density) / 1933440; // Magic ratio
