@@ -1,6 +1,7 @@
 body {
     background: radial-gradient(farthest-corner at 30vw 20vh,#7397a1 1%,#3f2c41 100%);
     overflow:hidden;
+    z-index: -100;
 }
 
 .snow {
@@ -66,6 +67,7 @@ body {
 
 @keyframes fall {
     0% {transform: translateY(0vh) translateX(0vw); }
+    20% {transform: translateY(40vh) translateX(8vw); }
     40% {transform: translateY(80vh) translateX(12vw); }
     50% {transform: translateY(100vh) translateX(15vw);}
     60% {transform: translateY(120vh) translateX(17vw);}
@@ -73,6 +75,8 @@ body {
     90% {transform: translateY(180vh) translateX(19vw);}
     100% {transform: translateY(200vh) translateX(20vw); }
 }
+
+
 
 @keyframes scalee {
     0% {transform: scale(5) translateY(-20vh);}

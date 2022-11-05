@@ -4,7 +4,7 @@ function Particle(x, y) {
     this.vel = createVector(random(this.startingVel),random(this.startingVel));
     this.acc = createVector(0,0);
     this.opacity = 75;
-    this.opacityIncr = 0.20;
+    this.opacityIncr = 0.30;
 
     this.color = color(random(255), random(255),random(255), this.opacity);
     this.maxspeed = 2;
