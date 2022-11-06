@@ -20,6 +20,11 @@ canvas {
     font-family: 'Cookie', cursive;
 }
 
+.showflowbut {
+    user-select: none;
+    position:absolute;
+}
+
 @keyframes fade {
     0% {opacity:100%;}
     100% {opacity: 0;display:none;}

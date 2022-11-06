@@ -3,6 +3,8 @@ var ROWS;
 var COLS;
 var flowfield;
 var particles = [];
+var showflow = false;
+var redrawGrid = false;
 var fr = 60; // frame rate
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
@@ -27,6 +29,16 @@ var inc = 0.1;
 var zOff = 0;
 
 function draw() {
+    if(showflow){
+        background(255);
+        redrawGrid = true;
+    }
+    else {
+        if(redrawGrid) {
+            background(255);
+            redrawGrid=false;
+        }
+    }
     var yoff = 0;
     for(let y = 0; y < ROWS; y++) {
         var xoff = 0;
@@ -38,14 +50,16 @@ function draw() {
             v.setMag(1);
             flowfield[index] = v;
             // console.log(v);
-            // rect(x * SCALE, y * SCALE, SCALE, SCALE);
-            // stroke(255);
-            // strokeWeight(1);
-            // push();
-            // translate(x*SCALE,y*SCALE);
-            // rotate(v.heading());
-            // line(0, 0, SCALE, 0);
-            // pop();
+            if(showflow) {
+                stroke(1);
+
+                strokeWeight(1);
+                push();
+                translate(x*SCALE,y*SCALE);
+                rotate(v.heading());
+                line(0, 0, SCALE, 0);
+                pop();
+            }
 
             xoff += inc;
             // noLoop();
