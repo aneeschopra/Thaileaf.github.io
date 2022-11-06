@@ -5,6 +5,8 @@ var flowfield;
 var particles = [];
 var showflow = false;
 var redrawGrid = false;
+
+var shownoise = false;
 var fr = 60; // frame rate
 function setup() {
     createCanvas(window.innerWidth, window.innerHeight);
@@ -29,7 +31,8 @@ var inc = 0.1;
 var zOff = 0;
 
 function draw() {
-    if(showflow){
+    // frameRate(fr);
+    if(showflow || shownoise){
         background(255);
         redrawGrid = true;
     }
@@ -50,6 +53,11 @@ function draw() {
             v.setMag(1);
             flowfield[index] = v;
             // console.log(v);
+            if(shownoise) {
+                fill(noise(xoff, yoff, zOff) * 255);
+                stroke(128);
+                rect(x * SCALE, y * SCALE, SCALE, SCALE);
+            }
             if(showflow) {
                 stroke(1);
 

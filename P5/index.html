@@ -17,7 +17,14 @@
 <script src="Particle.js"></script>
 
 <div class="fade">Click anywhere over here</div>
-<button class="showflowbut" onclick="showflow=!showflow">Click here to show flow</button>
+<div class="settings">
+
+    <button class="showflowbut" onclick="showflow=!showflow">Flow View</button>
+    <button class="showflowbut" onclick="shownoise=!shownoise">Noise View</button>
+
+    <input class="showflowbut" type="range" min="0" max="1" value="0.1" step="0.1" oninput="inc = this.value">Flowfield density</input>
+    <input class="showflowbut" type="range" min="0" max="60" value="10" oninput="life = this.value">Life</input>
+</div>
 
 </body>
 </html>

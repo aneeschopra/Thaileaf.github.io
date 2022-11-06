@@ -1,14 +1,17 @@
+var life = 10;
+
 function Particle(x, y) {
     this.pos = createVector(x,y);
     this.startingVel = 2;
     this.vel = createVector(random(this.startingVel),random(this.startingVel));
     this.acc = createVector(0,0);
     this.opacity = 75;
-    this.opacityIncr = 0.30;
-
     this.color = color(random(255), random(255),random(255), this.opacity);
+
     this.maxspeed = 2;
-    this.life = 10 * fr;
+    this.life = life * fr;
+    this.opacityIncr = (1/this.life) * 100;
+    console.log(this.opacityIncr);
 
     this.prevpos = this.pos.copy();
 

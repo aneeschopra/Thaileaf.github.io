@@ -20,9 +20,14 @@ canvas {
     font-family: 'Cookie', cursive;
 }
 
-.showflowbut {
+.settings {
     user-select: none;
     position:absolute;
+}
+
+.showflowbut {
+    /*user-select: none;*/
+    /*position:absolute;*/
 }
 
 @keyframes fade {
