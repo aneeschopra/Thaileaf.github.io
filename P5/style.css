@@ -5,3 +5,22 @@ html, body {
 canvas {
     display: block;
 }
+
+.fade {
+    position:absolute;
+    right: 5vw;
+    top:50vh;
+    font-size:75px;
+    /*opacity: 0;*/
+    /*transition: visibility 0s 2s, opacity 2s linear;*/
+    animation: fade 3s linear;
+    animation-iteration-count: 1;
+    user-select:none;
+    animation-fill-mode: forwards;
+    font-family: 'Cookie', cursive;
+}
+
+@keyframes fade {
+    0% {opacity:100%;}
+    100% {opacity: 0;display:none;}
+}
