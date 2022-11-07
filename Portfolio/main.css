@@ -11,6 +11,17 @@ html {
     position: absolute;
     left:10vw;
     top:50vh;
+    padding-left: 55px;
+    box-sizing: border-box;
+
+
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    /*justify-content: space-between;*/
+
+
+
+
     /*border-style: solid;*/
     /*border-color: white;*/
     /*transform: skewX(-89.8deg);*/
@@ -21,7 +32,38 @@ html {
     /*border-width: 1px;*/
     box-shadow: 0 0 0 .4px white;
     opacity: 0;
+
+
+    /*padding: 100px;*/
 }
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 12%;
+    width: 15%;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+.buttons > * {
+    background-color: transparent;
+    color:white;
+    text-align: left;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.buttons > *:hover {
+    animation: highlight 200ms ease-out 1;
+    animation-fill-mode: both;
+}
+
+@keyframes highlight {
+    100% {background: #555555; opacity: .6}
+}
+
 
 @keyframes screenAnimation {
     100% {opacity:1; width: 80vw}
@@ -36,8 +78,22 @@ html {
 }
 
 .boxtext {
-    padding-left:50px;
+    /*padding-left:50px;*/
 }
+
+.contacts {
+
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    bottom: 50px;
+    right: 50px;
+}
+
+.contacts > * {
+    padding:5px;
+}
+
 
 /*
 
