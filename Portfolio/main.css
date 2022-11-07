@@ -1,0 +1,72 @@
+html {
+    background-color: black;
+    overflow:hidden;
+}
+.box {
+    height: 1px;
+    width: 1px;
+    background-color: transparent;
+    color: white;
+    overflow:hidden;
+    position: absolute;
+    left:10vw;
+    top:50vh;
+    /*border-style: solid;*/
+    /*border-color: white;*/
+    /*transform: skewX(-89.8deg);*/
+    /*animation: skewSquare 5s linear 1, moveCornerA 2s ease-out 1;*/
+    animation: screenAnimation .3s ease-out 1, screenAnimation2 .3s ease-out 1, putElems 1s linear 1;
+    /*animation-delay: 1s, 4.5s;*/
+    animation-fill-mode: forwards;
+    /*border-width: 1px;*/
+    box-shadow: 0 0 0 .4px white;
+    opacity: 0;
+}
+
+@keyframes screenAnimation {
+    100% {opacity:1; width: 80vw}
+}
+
+@keyframes screenAnimation2 {
+    100% {height: 80vh; top: 10vh;}
+}
+
+@keyframes putElems {
+    /*100% {padding: 25px;}*/
+}
+
+.boxtext {
+    padding-left:50px;
+}
+
+/*
+
+.box.b {
+    !*animation: none;*!
+    border-color: white white transparent transparent;
+
+    animation: moveCornerB 2s ease-out 1;
+    animation-delay: 0s;
+    opacity:0;
+    animation-fill-mode: forwards;
+    !*transform:scale(2);*!
+}
+*/
+
+/*@keyframes skewSquare {*/
+/*    0% {transform: skewX(-89.9deg) rotate(90deg);}*/
+/*    20% {transform:skewX(-89.8deg) rotate(180deg);}*/
+/*    !*100% {transform: rotate(80deg) skewX(-85deg);}*!*/
+/*    50% {transform: rotate(90deg);}*/
+/*    !*100% {transform: scale(5) scaleX(3);}*!*/
+/*}*/
+
+/*@keyframes moveCornerA {*/
+/*    0% {opacity: 1;}*/
+/*    100% { opacity: 1; transform: translate(-40vw, 35vh)}*/
+/*}*/
+
+/*@keyframes moveCornerB {*/
+/*    0% {opacity: 1;}*/
+/*    100% { opacity: 1; transform: translate(40vw, -35vh);}*/
+/*}*/
