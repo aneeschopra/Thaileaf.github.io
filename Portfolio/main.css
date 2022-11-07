@@ -1,6 +1,10 @@
 html {
     background-color: black;
     overflow:hidden;
+    position:absolute;
+}
+body {
+    color:white;
 }
 .box {
     height: 1px;

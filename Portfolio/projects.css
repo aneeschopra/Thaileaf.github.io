@@ -20,6 +20,10 @@
     100% {top:20vh;}
 }
 
+@keyframes projSelectStart {
+    100% {height: 20vh;}
+}
+
 .projects-select {
     background-color: black;
 }
@@ -33,6 +37,25 @@
     outline: none;
 }
 
+.projects-select {
+    position: absolute;
+    top: 0;
+    height:0;
+    width:100vw;
+    overflow:hidden;
+}
 
+.projects-select-start {
+    animation: projSelectStart 1s ease-out 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
 
+.selectable-skills {
+    position: relative;
+    display: flex;
+    bottom: -32px;
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
 }
