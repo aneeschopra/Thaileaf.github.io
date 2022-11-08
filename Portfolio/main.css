@@ -112,6 +112,12 @@ body {
     padding:5px;
 }
 
+.home {
+    position: absolute;
+    left: 0;
+    bottom: 5%;
+}
+
 
 /*
 

@@ -2,22 +2,26 @@
     height: 100vh;
     width: 100vw;
     background: black;
-    padding: 15px;
+    padding-left: 15px;
     position: absolute;
     top: 0;
     opacity: 0;
     display: none;
+    box-sizing: border-box;
 }
 
 .about-me-body {
     padding-left: 25vw;
     padding-right: 25vw;
+    box-sizing: border-box;
 }
 
 .about-me-header {
+    position: relative;
     height: 20vh;
     padding-left: 5vw;
     padding-top: 3vw;
+    box-sizing: border-box;
 }
 
 .about-me-start {
