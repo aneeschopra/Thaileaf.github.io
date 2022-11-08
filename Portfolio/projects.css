@@ -67,8 +67,10 @@
 
 .projects-cards {
     background: black;
-    color:black;
+    color:white;
     overflow: auto;
+    width: 100vw;
+
     opacity: 0;
     display: flex;
     margin-top: 50px;
@@ -76,8 +78,12 @@
     column-gap: 20px;
     flex-wrap: wrap;
     row-gap: 20px;
-    align-content: center;
-    align-items: center;
+    align-content: flex-start;
+    align-items: flex-end;
+
+    padding-left: 50px;
+
+    /*overflow: hidden;*/
     /*flex-grow: 2;*/
     /*flex-basis: 0;*/
 }
@@ -95,4 +101,14 @@
     animation: projCardsStart 1s ease-out 1;
     animation-fill-mode: forwards;
     animation-delay: 3s;
+}
+
+.card {
+    background-color: transparent;
+    border-style: solid;
+    border-color: white;
+}
+
+.btn.btn-primary {
+    background-color: black;
 }

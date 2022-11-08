@@ -8,6 +8,8 @@ body {
     color:white;
     background-color: black;
     /*overflow: hidden;*/
+    overflow-x: hidden;
+    /*position: absolute;*/
 }
 .box {
     height: 1px;
@@ -33,8 +35,8 @@ body {
     /*border-color: white;*/
     /*transform: skewX(-89.8deg);*/
     /*animation: skewSquare 5s linear 1, moveCornerA 2s ease-out 1;*/
-    animation: screenAnimation .3s ease-out 1, screenAnimation2 .3s ease-out 1, putElems 1s linear 1;
-    /*animation-delay: 1s, 4.5s;*/
+    animation: screenAnimation 2s ease-out 1, screenAnimation2 3s ease-out 1, putElems 1s linear 1;
+    animation-delay: 1s, 3.5s;
     animation-fill-mode: forwards;
     /*border-width: 1px;*/
     box-shadow: 0 0 0 .4px white;
@@ -44,13 +46,21 @@ body {
     /*padding: 100px;*/
 }
 
+.box > * {
+    animation: fadeInElems 3s ease-out 1;
+    opacity:0;
+    animation-fill-mode: forwards;
+    animation-delay:4s;
+}
+
 .buttons {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     height: 12%;
     width: 15%;
+    row-gap: 10px;
     margin-left: 20px;
+    margin-top: 20px;
     white-space: nowrap;
 }
 
@@ -86,6 +96,10 @@ body {
 
 @keyframes putElems {
     /*100% {padding: 25px;}*/
+}
+
+@keyframes fadeInElems {
+    100% {opacity: 1;}
 }
 
 .boxtext {

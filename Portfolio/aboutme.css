@@ -8,7 +8,24 @@
     opacity: 0;
     display: none;
 }
-.about-me-header {
-    height: 20vh;
+
+.about-me-body {
+    padding-left: 25vw;
+    padding-right: 25vw;
 }
 
+.about-me-header {
+    height: 20vh;
+    padding-left: 5vw;
+    padding-top: 3vw;
+}
+
+.about-me-start {
+    animation: aboutStart 2s ease-out 1;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+@keyframes aboutStart {
+    100% {opacity: 1;}
+}
