@@ -164,8 +164,24 @@
 
         function loadsite() {
             loadSkills();
+            if(document.cookie) {
+                setFastLoad();
+            }
+            else {
+                document.cookie = "visited:true;"
+            }
+
+
             // transProj();
             // transAbout();
+        }
+
+        function setFastLoad() {
+            document.querySelector(':root').style.setProperty("--box-anim-time1", "1s");
+            document.querySelector(':root').style.setProperty("--box-anim-time2", "1s");
+            document.querySelector(':root').style.setProperty("--box-anim-delay1", ".5s");
+            document.querySelector(':root').style.setProperty("--box-anim-delay2", "1.5s");
+            document.querySelector(':root').style.setProperty("--box-anim-elem-delay", "1.5s");
         }
     </script>
 

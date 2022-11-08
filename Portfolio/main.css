@@ -11,6 +11,17 @@ body {
     overflow-x: hidden;
     /*position: absolute;*/
 }
+
+:root {
+    --box-anim-time1: 2s;
+    --box-anim-time2: 3s;
+    --box-anim-delay1: 1s;
+    --box-anim-delay2: 3.5s;
+    --box-anim-elem-delay: 4s;
+/*    fast vals: 1s 1s 0s 1s 1s*/
+}
+
+
 .box {
     height: 1px;
     width: 1px;
@@ -24,19 +35,9 @@ body {
     box-sizing: border-box;
 
 
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    /*justify-content: space-between;*/
 
-
-
-
-    /*border-style: solid;*/
-    /*border-color: white;*/
-    /*transform: skewX(-89.8deg);*/
-    /*animation: skewSquare 5s linear 1, moveCornerA 2s ease-out 1;*/
-    animation: screenAnimation 2s ease-out 1, screenAnimation2 3s ease-out 1, putElems 1s linear 1;
-    animation-delay: 1s, 3.5s;
+    animation: screenAnimation var(--box-anim-time1) ease-out 1, screenAnimation2 var(--box-anim-time2) ease-out 1;
+    animation-delay: var(--box-anim-delay1), var(--box-anim-delay2);
     animation-fill-mode: forwards;
     /*border-width: 1px;*/
     box-shadow: 0 0 0 .4px white;
@@ -50,7 +51,7 @@ body {
     animation: fadeInElems 3s ease-out 1;
     opacity:0;
     animation-fill-mode: forwards;
-    animation-delay:4s;
+    animation-delay:var(--box-anim-elem-delay);
 }
 
 .buttons {
@@ -94,16 +95,8 @@ body {
     100% {height: 80vh; top: 10vh;}
 }
 
-@keyframes putElems {
-    /*100% {padding: 25px;}*/
-}
-
 @keyframes fadeInElems {
     100% {opacity: 1;}
-}
-
-.boxtext {
-    /*padding-left:50px;*/
 }
 
 .contacts {
