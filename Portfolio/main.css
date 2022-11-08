@@ -1,10 +1,13 @@
 html {
     background-color: black;
-    overflow:hidden;
+    /*overflow:hidden;*/
     position:absolute;
+    /*overflow:scroll;*/
 }
 body {
     color:white;
+    background-color: black;
+    /*overflow: hidden;*/
 }
 .box {
     height: 1px;
@@ -62,6 +65,10 @@ body {
 .buttons > *:hover {
     animation: highlight 200ms ease-out 1;
     animation-fill-mode: both;
+}
+
+.buttons > *:focus {
+    outline: none;
 }
 
 @keyframes highlight {
@@ -130,3 +137,7 @@ body {
 /*    0% {opacity: 1;}*/
 /*    100% { opacity: 1; transform: translate(40vw, -35vh);}*/
 /*}*/
+
+.projects {
+    display: none;
+}
