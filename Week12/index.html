@@ -18,8 +18,8 @@
 
   async function move() {
     await sleep(250);
-    document.getElementById("area").style.left = "" + (Math.random() * window.innerWidth - 200) + "px";
-    document.getElementById("area").style.top = "" + (Math.random() * window.innerHeight - 200) + "px";
+    document.getElementById("area").style.left = "" + (Math.random() * (window.innerWidth - 400) + 200) + "px";
+    document.getElementById("area").style.top = "" + (Math.random() * (window.innerHeight - 400) + 200) + "px";
   }
 
   function win() {
