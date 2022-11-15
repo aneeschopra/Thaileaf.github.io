@@ -6,6 +6,11 @@ body{
     margin:0;
     overflow: hidden;
 }
+
+h1 {
+text-align: center;
+}
+
 #but {
     position: absolute;
     left: 35%;
@@ -19,4 +24,11 @@ body{
     height: 200px;
     width: 200px;
     background-color: transparent;
+}
+
+.button:hover {
+  background-color: red;
+  font-size: 20px;
+  color: white;
+  transform: scale(1.5);
 }
