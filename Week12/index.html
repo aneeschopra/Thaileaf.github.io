@@ -4,33 +4,34 @@
   <meta charset="UTF-8">
   <title>The Button</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel = "stylesheet" href="main.css"/>
-  <script defer>
-
-
-    async function move() {
-      await sleep(250);
-      document.getElementById("area").style.left = "" + (Math.random() * (window.innerWidth - 400) + 200) + "px";
-      document.getElementById("area").style.top = "" + (Math.random() * (window.innerHeight - 400) + 200) + "px";
-    }
-
-    function win() {
-      document.querySelector("body").style.background = "linear-gradient(#e66465, #9198e5)";
-    }
-
-    function sleep(ms) {
-      return new Promise(resolve => setTimeout(resolve, ms)); // Why does this only run once?
-    }
-  </script>
-
+  <link rel = "stylesheet" href="hi.css"/>
 </head>
 <body>
 
+<h1>Let's Play Tag</h1>
+
 <div id="area" onmouseover="move()">
-  <button id="but" onclick="win()">Click me</button>
+  <button class="button" id="but" onclick="win()">Click me</button>
 </div>
 
 </body>
+<script>
+
+
+  async function move() {
+    await sleep(250);
+    document.getElementById("area").style.left = "" + (Math.random() * (window.innerWidth - 400) + 200) + "px";
+    document.getElementById("area").style.top = "" + (Math.random() * (window.innerHeight - 400) + 200) + "px";
+  }
+
+  function win() {
+    document.querySelector("body").style.background = "linear-gradient(#e66465, #9198e5)";
+  }
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms)); // Why does this only run once?
+  }
+</script>
 
 
 </html>
